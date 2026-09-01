@@ -2,7 +2,6 @@ import logging
 import sys
 import textwrap
 
-import dagster as dg
 import pytest
 from dagster._core.definitions.dependency import NodeHandle
 from dagster._core.errors import user_code_error_boundary
@@ -15,6 +14,8 @@ from dagster._core.log_manager import (
     construct_log_record_message,
 )
 from dagster._utils.error import SerializableErrorInfo, serializable_error_info_from_exc_info
+
+import dagster as dg
 
 
 def _construct_log_handler_metadata(**kwargs) -> DagsterLogRecordMetadata:
